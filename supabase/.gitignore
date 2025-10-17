@@ -1,0 +1,6 @@
+# Supabase
+node_modules/
+.env
+.DS_Store
+supabase/.temp/
+supabase/config.toml
