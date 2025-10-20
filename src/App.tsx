@@ -171,7 +171,7 @@ function App() {
             <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
               <img src="https://res.cloudinary.com/drveridbx/image/upload/v1760684553/Bank_Statement_Pro_App_Icon_ggy8ro.png" alt="Bank Statement Pro Logo" className="h-7 w-7 md:h-8 md:w-8 rounded" />
             </div>
-            <span className="text-lg font-bold">Bank Statement Pro</span>
+            <span className="hidden md:inline text-lg font-bold">Bank Statement Pro</span>
           </div>
           
           {/* Desktop Navigation */}
