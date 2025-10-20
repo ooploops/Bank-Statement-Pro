@@ -9,15 +9,14 @@ import { Shield, Zap, Download, Tags, CheckCircle, Star, Play, ArrowRight, Githu
 import { useState, useEffect, useRef } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import Waitlist from "@/components/Waitlist"
 import Privacy from "@/pages/Privacy"
 import Terms from "@/pages/Terms"
+import Contact from "@/pages/Contact"
 gsap.registerPlugin(ScrollTrigger)
 
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [showWaitlist, setShowWaitlist] = useState(false)
-  const [currentPage, setCurrentPage] = useState<'home' | 'privacy' | 'terms'>('home')
+  const [currentPage, setCurrentPage] = useState<'home' | 'privacy' | 'terms' | 'contact'>('home')
   const textRef = useRef<HTMLSpanElement>(null)
   const formats = ["CSV", "Plain English", "XLSX", "Copy & Paste", "JSON", "Simple Data"]
   const headingRefs = useRef<(HTMLHeadingElement | null)[]>([])
@@ -157,13 +156,11 @@ function App() {
       {currentPage === 'terms' && (
         <Terms onBack={() => setCurrentPage('home')} />
       )}
+      {currentPage === 'contact' && (
+        <Contact onBack={() => setCurrentPage('home')} />
+      )}
       {currentPage === 'home' && (
         <>
-          {showWaitlist && (
-            <div className="fixed inset-0 z-[100] flex items-center justify-center" style={{ background: "rgba(10, 10, 10, 0.92)" }}>
-              <Waitlist onBack={() => setShowWaitlist(false)} />
-            </div>
-          )}
       {/* Navigation */}
       <nav className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-3 sm:px-4 md:px-8">
         <div className="container flex h-16 items-center">
@@ -227,7 +224,7 @@ function App() {
                   Pricing
                 </a>
               </nav>
-              <Button size="sm" className="w-full btn-animated" onClick={() => { setMobileMenuOpen(false); setShowWaitlist(true) }}>
+              <Button size="sm" className="w-full btn-animated" onClick={() => { setMobileMenuOpen(false) }}>
                 Download Free
               </Button>
             </div>
@@ -296,7 +293,7 @@ function App() {
             </div>
             {/* CTA & Demo Buttons */}
             <div className="mt-8 md:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 px-2 sm:px-4 md:px-6">
-              <Button size="lg" className="h-12 px-6 md:px-8 w-full sm:w-auto btn-animated border-2 border-white" onClick={() => setShowWaitlist(true)}>
+              <Button size="lg" className="h-12 px-6 md:px-8 w-full sm:w-auto btn-animated border-2 border-white" onClick={() => {}}>
                 <Download className="mr-2 h-5 w-5" />
                 Download Free on Mac App Store
               </Button>
@@ -592,7 +589,7 @@ function App() {
                     </div>
                   </div>
                   <Separator />
-                  <Button variant="outline" className="w-full btn-animated" onClick={() => setShowWaitlist(true)}>
+                  <Button variant="outline" className="w-full btn-animated" onClick={() => {}}>
                     Download Free
                   </Button>
                 </CardContent>
@@ -633,7 +630,7 @@ function App() {
                     </div>
                   </div>
                   <Separator />
-                  <Button className="w-full btn-animated" onClick={() => setShowWaitlist(true)}>
+                  <Button className="w-full btn-animated" onClick={() => {}}>
                     Start Free Trial
                   </Button>
                 </CardContent>
@@ -733,7 +730,7 @@ function App() {
               Join thousands of Mac users who have transformed their financial workflow
             </p>
             <div className="mt-6 md:mt-8">
-              <Button size="lg" className="h-12 px-6 md:px-8 w-full sm:w-auto btn-animated" onClick={() => setShowWaitlist(true)}>
+              <Button size="lg" className="h-12 px-6 md:px-8 w-full sm:w-auto btn-animated" onClick={() => {}}>
                 <Download className="mr-2 h-5 w-5" />
                 Download on Mac App Store
               </Button>
@@ -797,7 +794,12 @@ function App() {
                 >
                   Terms of Service
                 </button>
-                <a href="#" className="block text-muted-foreground hover:text-foreground footer-link">Contact</a>
+                <a 
+                  href="mailto:hi@speedysite.co?subject=Bank Statement Pro - Inquiry" 
+                  className="block text-muted-foreground hover:text-foreground footer-link"
+                >
+                  Contact
+                </a>
               </div>
             </div>
           </div>
