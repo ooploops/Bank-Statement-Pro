@@ -795,8 +795,10 @@ function App() {
                   Terms of Service
                 </button>
                 <a 
-                  href="mailto:hi@speedysite.co?subject=Bank Statement Pro - Inquiry" 
-                  className="block text-muted-foreground hover:text-foreground footer-link"
+                  href="mailto:hi@speedysite.co?subject=Bank%20Statement%20Pro%20-%20Inquiry" 
+                  className="block text-muted-foreground hover:text-foreground footer-link cursor-pointer"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Contact
                 </a>
