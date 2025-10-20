@@ -363,7 +363,7 @@ function App() {
         </div>
       </section>
       {/* Features with Accordion */}
-      <section className="section-mobile py-16 px-6 md:px-12 lg:px-32">
+      <section id="features" className="section-mobile py-16 px-6 md:px-12 lg:px-32">
         <h2 className="text-3xl md:text-4xl font-bold mb-2 text-center">Powerful Features, Privacy Protected</h2>
         <p className="text-lg text-center mb-10">Everything you need to transform your financial data</p>
 
@@ -553,7 +553,7 @@ function App() {
         <div className="container px-0 max-w-4xl mx-auto">
           <div className="mx-auto text-center">
             <h2 className="text-2xl md:text-3xl font-bold tracking-tight lg:text-4xl mb-4" ref={el => headingRefs.current[4] = el}>
-              Download Free, <span className="text-accent">3 Free Generations</span> to Get Started
+              Free to <span className="text-accent">Download & Try</span>
             </h2>
             <p className="mt-4 text-base md:text-lg text-muted-foreground">
               Free download with 3 AI generations to test the app, then subscribe for unlimited access
