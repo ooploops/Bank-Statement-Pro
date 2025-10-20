@@ -8,9 +8,9 @@
     "@type": "Offer",
     "price": "0",
     "priceCurrency": "USD",
-    "description": "Free tier available. Premium AI features for $20/month."
+    "description": "Free download with 3 free AI generations. Premium unlimited processing for $20/month."
   },
-  "description": "AI-powered bank statement converter for Mac. Convert bank statements to Excel, CSV, and more with privacy-first local processing.",
+  "description": "AI-powered bank statement converter for Mac. Free download with 3 free AI generations for testing. Convert bank statements to Excel, CSV, and more with privacy protection.",
   "url": "https://bankstatementpro.app",
   "screenshot": "https://res.cloudinary.com/drveridbx/image/upload/v1760684352/Bank_Statement_Pro_OG_Image_New_lwkwj8.png"
 }
@@ -21,10 +21,10 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "How does local processing protect my privacy?",
+      "name": "How does privacy protection work?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Bank Statement Pro processes all your financial data locally on your Mac using advanced AI models. Your sensitive information never leaves your device, and there are no cloud servers involved. This ensures complete privacy protection and compliance with financial data regulations."
+        "text": "Bank Statement Pro automatically redacts all personal information (account numbers, names, addresses) before sending transaction data for AI processing. Your sensitive information stays private, and only anonymized transaction data is processed to categorize and organize your financial records."
       }
     },
     {
@@ -53,10 +53,10 @@
     },
     {
       "@type": "Question",
-      "name": "How does the free trial work?",
+      "name": "How does the free download work?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The free tier includes basic document processing and export capabilities. You can upgrade to AI Premium at any time to unlock advanced AI features, real-time processing, and batch capabilities. The premium trial includes a 7-day free trial with full access to all AI-powered features."
+        "text": "Bank Statement Pro is free to download from the Mac App Store and includes 3 free AI generations so you can test the app's capabilities. After your free generations are used, you can subscribe to AI Premium for unlimited processing. The premium subscription includes a 7-day free trial."
       }
     }
   ]
