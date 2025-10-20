@@ -10,11 +10,14 @@ import { useState, useEffect, useRef } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import Waitlist from "@/components/Waitlist"
+import Privacy from "@/pages/Privacy"
+import Terms from "@/pages/Terms"
 gsap.registerPlugin(ScrollTrigger)
 
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [showWaitlist, setShowWaitlist] = useState(false)
+  const [currentPage, setCurrentPage] = useState<'home' | 'privacy' | 'terms'>('home')
   const textRef = useRef<HTMLSpanElement>(null)
   const formats = ["CSV", "Plain English", "XLSX", "Copy & Paste", "JSON", "Simple Data"]
   const headingRefs = useRef<(HTMLHeadingElement | null)[]>([])
@@ -148,13 +151,21 @@ function App() {
 
   return (
     <div className="min-h-screen bg-background text-foreground antialiased">
-      {showWaitlist && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center" style={{ background: "rgba(10, 10, 10, 0.92)" }}>
-          <Waitlist onBack={() => setShowWaitlist(false)} />
-        </div>
+      {currentPage === 'privacy' && (
+        <Privacy onBack={() => setCurrentPage('home')} />
       )}
+      {currentPage === 'terms' && (
+        <Terms onBack={() => setCurrentPage('home')} />
+      )}
+      {currentPage === 'home' && (
+        <>
+          {showWaitlist && (
+            <div className="fixed inset-0 z-[100] flex items-center justify-center" style={{ background: "rgba(10, 10, 10, 0.92)" }}>
+              <Waitlist onBack={() => setShowWaitlist(false)} />
+            </div>
+          )}
       {/* Navigation */}
-      <nav className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-6 sm:px-6 md:px-8">
+      <nav className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-6 sm:px-6 md:px-8">
         <div className="container flex h-16 items-center">
           <div className="mr-4 flex items-center space-x-2">
             <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
@@ -164,34 +175,15 @@ function App() {
           </div>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex flex-1 items-center justify-between">
-            <nav className="flex items-center space-x-6 text-sm font-medium">
-              <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">Features</a>
-              <a href="#privacy" className="text-muted-foreground hover:text-foreground transition-colors">Privacy</a>
-              <a href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors">Pricing</a>
-              <Dialog>
-                <DialogTrigger asChild>
-                  <button className="text-muted-foreground hover:text-foreground transition-colors">Demo</button>
-                </DialogTrigger>
-                <DialogContent className="max-w-4xl">
-                  <DialogHeader>
-                    <DialogTitle>See Bank Statement Pro in Action</DialogTitle>
-                    <DialogDescription>
-                      Watch how AI transforms your financial data in real-time
-                    </DialogDescription>
-                  </DialogHeader>
-                  <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg flex items-center justify-center">
-                    <div className="text-center">
-                      <Play className="h-16 w-16 mx-auto mb-4 text-primary" />
-                      <p className="text-lg font-medium">Interactive Demo</p>
-                      <p className="text-sm text-muted-foreground">See the AI processing workflow</p>
-                    </div>
-                  </div>
-                </DialogContent>
-              </Dialog>
-            </nav>
-            <Button size="sm" onClick={() => setShowWaitlist(true)}>
-              Download Free
+          <div className="hidden md:flex flex-1 items-center justify-end">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              <span className="ml-2">Menu</span>
             </Button>
           </div>
 
@@ -210,7 +202,7 @@ function App() {
 
         {/* Mobile Navigation Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden border-t border-border">
+          <div className="">
             <div className="container py-4 space-y-4">
               <nav className="mobile-menu-centered flex flex-col space-y-3">
                 <a 
@@ -234,28 +226,6 @@ function App() {
                 >
                   Pricing
                 </a>
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <button className="text-muted-foreground hover:text-foreground transition-colors py-2 text-center btn-animated">
-                      Demo
-                    </button>
-                  </DialogTrigger>
-                  <DialogContent className="max-w-[95vw] max-h-[95vh]">
-                    <DialogHeader>
-                      <DialogTitle>See Bank Statement Pro in Action</DialogTitle>
-                      <DialogDescription>
-                        Watch how AI transforms your financial data in real-time
-                      </DialogDescription>
-                    </DialogHeader>
-                    <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg flex items-center justify-center">
-                      <div className="text-center">
-                        <Play className="h-12 w-12 mx-auto mb-4 text-primary" />
-                        <p className="text-base font-medium">Interactive Demo</p>
-                        <p className="text-sm text-muted-foreground">See the AI processing workflow</p>
-                      </div>
-                    </div>
-                  </DialogContent>
-                </Dialog>
               </nav>
               <Button size="sm" className="w-full btn-animated" onClick={() => { setMobileMenuOpen(false); setShowWaitlist(true) }}>
                 Download Free
@@ -266,7 +236,7 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-12 md:py-20 lg:py-32 px-6 sm:px-6 md:px-8 section-mobile" ref={el => sectionRefs.current[0] = el}>
+      <section className="relative overflow-hidden py-8 md:py-12 lg:py-16 px-6 sm:px-6 md:px-8 section-mobile" ref={el => sectionRefs.current[0] = el}>
         <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent" />
         
@@ -282,9 +252,8 @@ function App() {
               </div>
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-bold text-center mb-4 leading-tight" ref={el => headingRefs.current[0] = el}>
-              <span className="block mb-1 md:mb-2">Transform Bank</span>
-              <span className="block mb-1 md:mb-2">Statements Into</span>
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-center mb-4 leading-tight" ref={el => headingRefs.current[0] = el}>
+              <span className="block mb-1 md:mb-2">Transform Bank</span> <span className="block mb-1 md:mb-2">Statements Into</span>
               <span className="flex justify-center">
                 <span 
                   ref={textRef}
@@ -294,7 +263,7 @@ function App() {
                 </span>
               </span>
             </h1>
-            <p className="mt-6 md:mt-8 text-lg md:text-xl leading-7 md:leading-8 text-muted-foreground max-w-2xl mx-auto px-2 sm:px-4 md:px-6">
+            <p className="mt-3 md:mt-4 text-lg md:text-xl leading-7 md:leading-8 text-muted-foreground max-w-2xl mx-auto px-2 sm:px-4 md:px-6">
               AI-powered bank statement processing with complete privacy protection. Extract transaction data locally on your Mac.
             </p>
             {/* Large image or video spot below paragraph */}
@@ -815,8 +784,18 @@ function App() {
             <div>
               <h3 className="text-sm font-semibold">Legal</h3>
               <div className="mt-3 md:mt-4 space-y-2 text-xs md:text-sm">
-                <a href="#" className="block text-muted-foreground hover:text-foreground footer-link">Privacy Policy</a>
-                <a href="#" className="block text-muted-foreground hover:text-foreground footer-link">Terms of Service</a>
+                <button 
+                  onClick={() => setCurrentPage('privacy')} 
+                  className="block text-muted-foreground hover:text-foreground footer-link text-left"
+                >
+                  Privacy Policy
+                </button>
+                <button 
+                  onClick={() => setCurrentPage('terms')} 
+                  className="block text-muted-foreground hover:text-foreground footer-link text-left"
+                >
+                  Terms of Service
+                </button>
                 <a href="#" className="block text-muted-foreground hover:text-foreground footer-link">Contact</a>
               </div>
             </div>
@@ -829,6 +808,8 @@ function App() {
           </div>
         </div>
       </footer>
+        </>
+      )}
     </div>
   )
 }
