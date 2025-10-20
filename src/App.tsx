@@ -165,13 +165,13 @@ function App() {
             </div>
           )}
       {/* Navigation */}
-      <nav className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-6 sm:px-6 md:px-8">
+      <nav className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-3 sm:px-4 md:px-8">
         <div className="container flex h-16 items-center">
-          <div className="mr-4 flex items-center space-x-2">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
-              <img src="https://res.cloudinary.com/drveridbx/image/upload/v1760684553/Bank_Statement_Pro_App_Icon_ggy8ro.png" alt="Bank Statement Pro Logo" className="h-7 w-7 md:h-8 md:w-8 rounded" />
+          <div className="mr-2 flex items-center space-x-2 sm:space-x-3 flex-1 min-w-0">
+            <div className="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-lg bg-primary flex-shrink-0">
+              <img src="https://res.cloudinary.com/drveridbx/image/upload/v1760684553/Bank_Statement_Pro_App_Icon_ggy8ro.png" alt="Bank Statement Pro Logo" className="h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10 rounded" />
             </div>
-            <span className="hidden md:inline text-lg font-bold">Bank Statement Pro</span>
+            <span className="text-sm sm:text-base md:text-lg font-bold truncate">Bank Statement Pro</span>
           </div>
           
           {/* Desktop Navigation */}
@@ -188,7 +188,7 @@ function App() {
           </div>
 
           {/* Mobile menu button */}
-          <div className="flex flex-1 justify-end md:hidden">
+          <div className="flex justify-end md:hidden flex-shrink-0">
             <Button
               variant="ghost"
               size="sm"
