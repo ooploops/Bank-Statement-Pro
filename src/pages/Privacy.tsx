@@ -30,7 +30,7 @@ export default function Privacy({ onBack }: PrivacyProps) {
 
           <h2 className="text-2xl font-semibold mt-8 mb-4">Overview</h2>
           <p className="mb-6">
-            Bank Statement Pro is committed to protecting your privacy and financial data. This Privacy Policy explains how we collect, use, and protect your information when using our free app with subscription-based AI processing features.
+            Bank Statement Pro is committed to protecting your privacy and financial data. This Privacy Policy explains how we collect, use, and protect your information when using our free download app with 3 free AI generations and subscription-based unlimited AI processing features.
           </p>
 
           <h2 className="text-2xl font-semibold mt-8 mb-4">Data Collection and Usage</h2>
@@ -55,12 +55,13 @@ export default function Privacy({ onBack }: PrivacyProps) {
 
           <h2 className="text-2xl font-semibold mt-8 mb-4">Data Processing</h2>
           
-          <h3 className="text-xl font-semibold mt-6 mb-3">AI-Powered Processing (Subscription Required)</h3>
+          <h3 className="text-xl font-semibold mt-6 mb-3">AI-Powered Processing (3 Free Generations + Subscription)</h3>
           <ul className="list-disc pl-6 mb-6 space-y-2">
             <li>Document text is extracted locally on your Mac using standard macOS APIs</li>
             <li>Personal information is automatically redacted before any data leaves your device</li>
             <li><strong>Complete document text</strong> (after PII redaction) is sent to our secure AI service for comprehensive analysis</li>
-            <li><strong>Requires active subscription</strong> - AI processing features are not available in the free version</li>
+            <li><strong>3 free generations included</strong> for testing the app's capabilities</li>
+            <li><strong>Unlimited processing requires active subscription</strong> after free generations are used</li>
             <li><strong>No personal information</strong> (account numbers, names, addresses) is included in requests due to automatic redaction</li>
             <li>AI processing happens via encrypted HTTPS connections to secure cloud servers</li>
             <li>Original binary files (PDFs, images) never leave your device - only extracted and redacted text</li>
@@ -91,11 +92,11 @@ export default function Privacy({ onBack }: PrivacyProps) {
 
           <h2 className="text-2xl font-semibold mt-8 mb-4">Your Rights</h2>
           <ul className="list-disc pl-6 mb-6 space-y-2">
-            <li><strong>Free Download:</strong> The app is free to download and try</li>
+            <li><strong>Free Download:</strong> The app is free to download with 3 free AI generations for testing</li>
             <li><strong>Subscription Control:</strong> Cancel your subscription at any time through your Apple ID settings</li>
             <li><strong>Data Access:</strong> View all processed documents in the app</li>
             <li><strong>Data Deletion:</strong> Delete individual documents or all data through app settings</li>
-            <li><strong>AI Control:</strong> AI processing features require an active subscription</li>
+            <li><strong>AI Control:</strong> Unlimited AI processing features require an active subscription after free generations</li>
             <li><strong>Data Export:</strong> Export your data in multiple formats (CSV, Excel, PDF)</li>
             <li><strong>Privacy Control:</strong> All personal information is automatically redacted before any cloud processing</li>
           </ul>
@@ -139,19 +140,20 @@ export default function Privacy({ onBack }: PrivacyProps) {
           <h2 className="text-2xl font-semibold mt-8 mb-4">Subscription and Billing</h2>
           <p className="mb-4">Bank Statement Pro operates on a freemium model:</p>
           
-          <h3 className="text-xl font-semibold mt-6 mb-3">Free Version</h3>
+          <h3 className="text-xl font-semibold mt-6 mb-3">Free Download</h3>
           <ul className="list-disc pl-6 mb-6 space-y-2">
             <li>Download and basic app functionality are completely free</li>
-            <li>Document importing and local storage capabilities</li>
+            <li>3 free AI generations included for testing</li>
+            <li>Document importing and viewing capabilities</li>
             <li>Export functionality for processed documents</li>
           </ul>
 
-          <h3 className="text-xl font-semibold mt-6 mb-3">Subscription Features</h3>
+          <h3 className="text-xl font-semibold mt-6 mb-3">Premium Subscription Features</h3>
           <ul className="list-disc pl-6 mb-6 space-y-2">
-            <li>AI-powered transaction extraction and categorization</li>
+            <li>Unlimited AI-powered transaction extraction and categorization</li>
             <li>Advanced data cleaning and merchant identification</li>
             <li>Real-time streaming processing</li>
-            <li>Monthly subscription required for AI features</li>
+            <li>Monthly subscription required for unlimited AI features</li>
             <li>Billing handled securely through Apple's App Store</li>
             <li>Cancel anytime through your Apple ID account settings</li>
           </ul>

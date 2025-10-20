@@ -264,7 +264,7 @@ function App() {
               </span>
             </h1>
             <p className="mt-3 md:mt-4 text-lg md:text-xl leading-7 md:leading-8 text-muted-foreground max-w-2xl mx-auto px-2 sm:px-4 md:px-6">
-              AI-powered bank statement processing with complete privacy protection. Extract transaction data locally on your Mac.
+              AI-powered bank statement processing with complete privacy protection. Free to download with 3 free generations to test.
             </p>
             {/* Large image or video spot below paragraph */}
             <div className="mt-8 flex justify-center">
@@ -323,7 +323,7 @@ function App() {
             </div>
             <div className="text-center">
               <div className="text-2xl md:text-3xl font-bold text-primary">24/7</div>
-              <div className="text-xs md:text-sm text-muted-foreground">Local Processing</div>
+              <div className="text-xs md:text-sm text-muted-foreground">24/7 Available</div>
             </div>
           </div>
         </div>
@@ -377,14 +377,14 @@ function App() {
                   <AccordionTrigger className="text-left text-sm md:text-base">
                     <div className="flex items-center gap-3">
                       <Shield className="h-4 w-4 md:h-5 md:w-5 text-primary" />
-                      Local AI Processing
+                      Privacy-Protected AI Processing
                     </div>
                   </AccordionTrigger>
                   <AccordionContent>
                     <p className="text-sm md:text-base text-muted-foreground">
-                      Complete privacy protection - your transaction data never leaves your Mac. 
-                      All AI processing happens locally using advanced machine learning models 
-                      optimized for financial data extraction.
+                      Complete privacy protection with automatic PII redaction. Your sensitive 
+                      information is removed before AI processing, ensuring your personal data 
+                      stays private while getting powerful transaction categorization.
                     </p>
                   </AccordionContent>
                 </AccordionItem>
@@ -487,9 +487,9 @@ function App() {
                       <Lock className="h-4 w-4 md:h-5 md:w-5 text-accent" />
                     </div>
                     <div>
-                      <h3 className="text-sm md:text-base font-semibold">Local Processing Only</h3>
+                      <h3 className="text-sm md:text-base font-semibold">Privacy-First Processing</h3>
                       <p className="mt-1 text-xs md:text-sm text-muted-foreground">
-                        All AI processing happens on your Mac. No data ever leaves your device.
+                        Your personal data is automatically redacted before AI processing.
                       </p>
                     </div>
                   </div>
@@ -553,10 +553,10 @@ function App() {
         <div className="container px-0 max-w-4xl mx-auto">
           <div className="mx-auto text-center">
             <h2 className="text-2xl md:text-3xl font-bold tracking-tight lg:text-4xl mb-4" ref={el => headingRefs.current[4] = el}>
-              Try Free, Upgrade for <span className="text-accent">AI Power</span>
+              Download Free, <span className="text-accent">3 Free Generations</span> to Get Started
             </h2>
             <p className="mt-4 text-base md:text-lg text-muted-foreground">
-              Start free, then unlock advanced AI features when you need them
+              Free download with 3 AI generations to test the app, then subscribe for unlimited access
             </p>
           </div>
           
@@ -564,22 +564,23 @@ function App() {
             <div className="grid gap-6 lg:gap-8 lg:grid-cols-2">
               <Card className="relative card-mobile">
                 <CardHeader>
-                  <CardTitle className="text-xl md:text-2xl">Free Tier</CardTitle>
-                  <CardDescription className="text-sm md:text-base">Perfect for getting started</CardDescription>
+                  <CardTitle className="text-xl md:text-2xl">Free Download</CardTitle>
+                  <CardDescription className="text-sm md:text-base">Get started with 3 free generations</CardDescription>
                   <div className="text-3xl md:text-4xl font-bold">$0</div>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="space-y-3">
                     <div className="flex items-center gap-3">
                       <CheckCircle className="h-4 w-4 md:h-5 md:w-5 text-accent" />
-                      <span className="text-xs md:text-sm">Document import and basic processing</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <span className="text-xs md:text-sm">Document import and basic processing</span>
+                      <span className="text-xs md:text-sm">Free download from Mac App Store</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <CheckCircle className="h-4 w-4 md:h-5 md:w-5 text-accent" />
-                      <span className="text-xs md:text-sm">Local storage and export</span>
+                      <span className="text-xs md:text-sm">3 free AI generations for testing</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <CheckCircle className="h-4 w-4 md:h-5 md:w-5 text-accent" />
+                      <span className="text-xs md:text-sm">Document import and viewing</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <CheckCircle className="h-4 w-4 md:h-5 md:w-5 text-accent" />
@@ -587,7 +588,7 @@ function App() {
                     </div>
                     <div className="flex items-center gap-3">
                       <CheckCircle className="h-4 w-4 md:h-5 md:w-5 text-accent" />
-                      <span className="text-xs md:text-sm">Standard export formats</span>
+                      <span className="text-xs md:text-sm">Export processed results</span>
                     </div>
                   </div>
                   <Separator />
@@ -612,11 +613,11 @@ function App() {
                   <div className="space-y-3">
                     <div className="flex items-center gap-3">
                       <CheckCircle className="h-4 w-4 md:h-5 md:w-5 text-accent" />
-                      <span className="text-xs md:text-sm">Everything in Free</span>
+                      <span className="text-xs md:text-sm">Everything in Free Download</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <CheckCircle className="h-4 w-4 md:h-5 md:w-5 text-accent" />
-                      <span className="text-xs md:text-sm">AI-powered transaction extraction</span>
+                      <span className="text-xs md:text-sm">Unlimited AI-powered processing</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <CheckCircle className="h-4 w-4 md:h-5 md:w-5 text-accent" />
@@ -654,13 +655,13 @@ function App() {
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="privacy">
                 <AccordionTrigger className="text-left text-sm md:text-base">
-                  How does local processing protect my privacy?
+                  How does privacy protection work?
                 </AccordionTrigger>
                 <AccordionContent>
                   <p className="text-sm md:text-base">
-                    Bank Statement Pro processes all your financial data locally on your Mac using advanced AI models. 
-                    Your sensitive information never leaves your device, and there are no cloud servers involved. 
-                    This ensures complete privacy protection and compliance with financial data regulations.
+                    Bank Statement Pro automatically redacts all personal information (account numbers, names, addresses) 
+                    before sending transaction data for AI processing. Your sensitive information stays private, and only 
+                    anonymized transaction data is processed to categorize and organize your financial records.
                   </p>
                 </AccordionContent>
               </AccordionItem>
@@ -706,13 +707,13 @@ function App() {
               
               <AccordionItem value="trial">
                 <AccordionTrigger className="text-left text-sm md:text-base">
-                  How does the free trial work?
+                  How does the free download work?
                 </AccordionTrigger>
                 <AccordionContent>
                   <p className="text-sm md:text-base">
-                    The free tier includes basic document processing and export capabilities. You can upgrade to 
-                    AI Premium at any time to unlock advanced AI features, real-time processing, and batch capabilities. 
-                    The premium trial includes a 7-day free trial with full access to all AI-powered features.
+                    Bank Statement Pro is free to download from the Mac App Store and includes 3 free AI generations 
+                    so you can test the app's capabilities. After your free generations are used, you can subscribe to 
+                    AI Premium for unlimited processing. The premium subscription includes a 7-day free trial.
                   </p>
                 </AccordionContent>
               </AccordionItem>
@@ -740,9 +741,9 @@ function App() {
             <div className="mt-4 md:mt-6 flex flex-wrap items-center justify-center gap-2 md:gap-4 text-xs md:text-sm text-muted-foreground">
               <span>Free download</span>
               <span>•</span>
-              <span>Requires macOS</span>
+              <span>3 free generations</span>
               <span>•</span>
-              <span>No account needed</span>
+              <span>Requires macOS</span>
             </div>
           </div>
         </div>

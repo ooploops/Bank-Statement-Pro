@@ -35,25 +35,25 @@ export default function Terms({ onBack }: TermsProps) {
 
           <h2 className="text-2xl font-semibold mt-8 mb-4">Description of Service</h2>
           <p className="mb-6">
-            Bank Statement Pro is a macOS application that processes financial documents locally on your device and offers optional AI-powered enhancement features through a subscription service.
+            Bank Statement Pro is a macOS application that processes financial documents with privacy-protected AI processing and offers 3 free generations for testing, with unlimited AI-powered features available through a subscription service.
           </p>
 
-          <h3 className="text-xl font-semibold mt-6 mb-3">Free Features</h3>
+          <h3 className="text-xl font-semibold mt-6 mb-3">Free Download</h3>
           <ul className="list-disc pl-6 mb-6 space-y-2">
-            <li>Download and install the App at no cost</li>
+            <li>Download and install the App at no cost from the Mac App Store</li>
             <li>Import and view financial documents</li>
-            <li>Basic document processing and organization</li>
+            <li>3 free AI generations for testing the app's capabilities</li>
             <li>Export processed data in multiple formats</li>
-            <li>Local storage and management of your documents</li>
+            <li>No account required for download</li>
           </ul>
 
-          <h3 className="text-xl font-semibold mt-6 mb-3">Subscription Features</h3>
+          <h3 className="text-xl font-semibold mt-6 mb-3">Premium Subscription Features</h3>
           <ul className="list-disc pl-6 mb-6 space-y-2">
-            <li>AI-powered transaction categorization and data cleaning</li>
+            <li>Unlimited AI-powered transaction categorization and data cleaning</li>
             <li>Advanced merchant identification and description enhancement</li>
             <li>Real-time streaming processing capabilities</li>
             <li>Enhanced accuracy through GPT-4 processing</li>
-            <li>Requires active monthly subscription ($19.99/month)</li>
+            <li>Requires active monthly subscription ($20/month)</li>
           </ul>
 
           <h2 className="text-2xl font-semibold mt-8 mb-4">User Account and Subscription</h2>
