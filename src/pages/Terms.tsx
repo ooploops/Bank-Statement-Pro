@@ -20,10 +20,18 @@ export default function Terms({ onBack }: TermsProps) {
       <nav className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-3 sm:px-4 md:px-8">
         <div className="container flex h-16 items-center">
           <div className="mr-2 flex items-center space-x-2 sm:space-x-3 flex-1 min-w-0">
-            <div className="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-lg bg-primary flex-shrink-0">
+            <button 
+              onClick={onBack}
+              className="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-lg bg-primary flex-shrink-0 hover:bg-primary/90 transition-colors cursor-pointer"
+            >
               <img src="https://res.cloudinary.com/drveridbx/image/upload/v1760684553/Bank_Statement_Pro_App_Icon_ggy8ro.png" alt="Bank Statement Pro Logo" className="h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10 rounded" />
-            </div>
-            <span className="text-sm sm:text-base md:text-lg font-bold truncate">Bank Statement Pro</span>
+            </button>
+            <button 
+              onClick={onBack}
+              className="text-sm sm:text-base md:text-lg font-bold truncate hover:text-primary transition-colors cursor-pointer text-left"
+            >
+              Bank Statement Pro
+            </button>
           </div>
           
           {/* Desktop Navigation */}
@@ -321,10 +329,18 @@ export default function Terms({ onBack }: TermsProps) {
           <div className="grid gap-6 md:gap-8 md:grid-cols-4">
             <div className="md:col-span-2">
               <div className="flex items-center space-x-2">
-                <div className="flex h-6 w-6 md:h-8 md:w-8 items-center justify-center rounded-lg bg-primary">
+                <button 
+                  onClick={onBack}
+                  className="flex h-6 w-6 md:h-8 md:w-8 items-center justify-center rounded-lg bg-primary hover:bg-primary/90 transition-colors cursor-pointer"
+                >
                   <img src="https://res.cloudinary.com/drveridbx/image/upload/v1760684553/Bank_Statement_Pro_App_Icon_ggy8ro.png" alt="Bank Statement Pro Logo" className="h-5 w-5 md:h-6 md:w-6 rounded" />
-                </div>
-                <span className="text-base md:text-lg font-bold">Bank Statement Pro</span>
+                </button>
+                <button 
+                  onClick={onBack}
+                  className="text-base md:text-lg font-bold hover:text-primary transition-colors cursor-pointer"
+                >
+                  Bank Statement Pro
+                </button>
               </div>
               <p className="mt-3 md:mt-4 text-xs md:text-sm text-muted-foreground">
                 Transform messy bank statements into organized financial data with AI-powered processing and complete privacy protection.
