@@ -6,6 +6,9 @@ import path from "path"
 export default defineConfig({
   base: '/Bank-Statement-Pro/',
   plugins: [react()],
+  build: {
+    outDir: 'docs',
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
