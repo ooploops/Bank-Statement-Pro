@@ -698,7 +698,7 @@ function App() {
                   <p className="text-sm md:text-base">
                     Bank Statement Pro is free to download from the Mac App Store and includes 3 free AI generations 
                     so you can test the app's capabilities. After your free generations are used, you can subscribe to 
-                    AI Premium for unlimited processing. The premium subscription includes a 7-day free trial.
+                    AI Premium for unlimited processing.
                   </p>
                 </AccordionContent>
               </AccordionItem>
