@@ -351,7 +351,7 @@ function App() {
                 <Zap className="h-8 w-8 text-accent" />
               </div>
               <div className="text-xl font-bold mb-2">AI Processing</div>
-              <div className="text-base text-muted-foreground mb-2">Watch in real-time as AI extracts and categorizes your transaction data</div>
+              <div className="text-base text-muted-foreground mb-2">AI extracts and categorizes your transaction data with industry-leading accuracy</div>
             </div>
             <div className="bg-background rounded-2xl shadow-xl border border-primary/20 p-8 flex flex-col items-center text-center hover:shadow-2xl transition-all">
               <div className="flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
@@ -415,7 +415,7 @@ function App() {
                   </AccordionTrigger>
                   <AccordionContent>
                     <p className="text-sm md:text-base text-muted-foreground">
-                      Export to Excel, CSV, PDF, JSON, and QIF formats. 
+                      Export to Excel, CSV, and JSON formats. 
                       Perfect integration with QuickBooks, Xero, FreshBooks, 
                       and other popular accounting software.
                     </p>
@@ -441,10 +441,10 @@ function App() {
               <div className="card-mobile bg-transparent">
                 <div className="flex items-center gap-3 mb-2">
                   <Layers className="w-6 h-6 text-accent" />
-                  <span className="font-semibold text-lg">Batch Processing</span>
+                  <span className="font-semibold text-lg">Document Processing</span>
                 </div>
-                <div className="text-sm text-muted mb-1">Handle multiple documents</div>
-                <div className="text-base">Process multiple documents simultaneously. Handle months of statements in minutes with intelligent batch processing.</div>
+                <div className="text-sm text-muted mb-1">Process individual documents</div>
+                <div className="text-base">Upload and process your financial documents one at a time for precise AI-powered categorization and data extraction.</div>
               </div>
             </div>
           </div>
@@ -610,7 +610,7 @@ function App() {
                     </div>
                     <div className="flex items-center gap-3">
                       <CheckCircle className="h-4 w-4 md:h-5 md:w-5 text-accent" />
-                      <span className="text-xs md:text-sm">Batch processing</span>
+                      <span className="text-xs md:text-sm">Document processing</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <CheckCircle className="h-4 w-4 md:h-5 md:w-5 text-accent" />
