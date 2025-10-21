@@ -1,25 +1,90 @@
 import { Button } from "@/components/ui/button"
-import { ArrowLeft } from "lucide-react"
-import { useEffect } from "react"
+import { Separator } from "@/components/ui/separator"
+import { ArrowLeft, Menu, X, Github, Mail } from "lucide-react"
+import { useEffect, useState } from "react"
 
 interface TermsProps {
   onBack: () => void
 }
 
 export default function Terms({ onBack }: TermsProps) {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+  
   return (
     <div className="min-h-screen bg-background text-foreground antialiased">
-      <div className="container mx-auto px-6 py-8 max-w-4xl">
-        <div className="mb-8">
-          <Button variant="ghost" onClick={onBack} className="mb-4">
-            <ArrowLeft className="h-4 w-4 mr-2" />
-            Back to Home
-          </Button>
+      {/* Navigation */}
+      <nav className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-3 sm:px-4 md:px-8">
+        <div className="container flex h-16 items-center">
+          <div className="mr-2 flex items-center space-x-2 sm:space-x-3 flex-1 min-w-0">
+            <div className="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-lg bg-primary flex-shrink-0">
+              <img src="https://res.cloudinary.com/drveridbx/image/upload/v1760684553/Bank_Statement_Pro_App_Icon_ggy8ro.png" alt="Bank Statement Pro Logo" className="h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10 rounded" />
+            </div>
+            <span className="text-sm sm:text-base md:text-lg font-bold truncate">Bank Statement Pro</span>
+          </div>
+          
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex flex-1 items-center justify-end space-x-4">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={onBack}
+              className="btn-animated"
+            >
+              <ArrowLeft className="h-4 w-4 mr-2" />
+              Back to Home
+            </Button>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              <span className="ml-2">Menu</span>
+            </Button>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="flex justify-end md:hidden flex-shrink-0">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </Button>
+          </div>
         </div>
-        
+
+        {/* Mobile Navigation Menu */}
+        {mobileMenuOpen && (
+          <div className="">
+            <div className="container py-4 space-y-4">
+              <nav className="mobile-menu-centered flex flex-col space-y-3">
+                <Button
+                  variant="ghost"
+                  onClick={onBack}
+                  className="text-muted-foreground hover:text-foreground transition-colors py-2 btn-animated text-left justify-start"
+                >
+                  <ArrowLeft className="h-4 w-4 mr-2" />
+                  Back to Home
+                </Button>
+              </nav>
+              <Button size="sm" className="w-full btn-animated" onClick={() => { setMobileMenuOpen(false) }}>
+                Download Free
+              </Button>
+            </div>
+          </div>
+        )}
+      </nav>
+
+      {/* Main Content */}
+      <div className="container mx-auto px-6 py-8 max-w-4xl">
         <div className="prose prose-invert max-w-none">
           <h1 className="text-4xl font-bold mb-4">Bank Statement Pro - Terms of Service</h1>
           
@@ -249,6 +314,65 @@ export default function Terms({ onBack }: TermsProps) {
           </div>
         </div>
       </div>
+
+      {/* Footer */}
+      <footer className="border-t bg-background px-6 sm:px-6 md:px-8 section-mobile">
+        <div className="container py-8 md:py-12 px-0 max-w-6xl mx-auto">
+          <div className="grid gap-6 md:gap-8 md:grid-cols-4">
+            <div className="md:col-span-2">
+              <div className="flex items-center space-x-2">
+                <div className="flex h-6 w-6 md:h-8 md:w-8 items-center justify-center rounded-lg bg-primary">
+                  <img src="https://res.cloudinary.com/drveridbx/image/upload/v1760684553/Bank_Statement_Pro_App_Icon_ggy8ro.png" alt="Bank Statement Pro Logo" className="h-5 w-5 md:h-6 md:w-6 rounded" />
+                </div>
+                <span className="text-base md:text-lg font-bold">Bank Statement Pro</span>
+              </div>
+              <p className="mt-3 md:mt-4 text-xs md:text-sm text-muted-foreground">
+                Transform messy bank statements into organized financial data with AI-powered processing and complete privacy protection.
+              </p>
+              <div className="mt-4 md:mt-6 flex space-x-4">
+                <Button variant="ghost" size="sm" className="btn-animated">
+                  <Github className="h-4 w-4" />
+                </Button>
+                <Button variant="ghost" size="sm" className="btn-animated">
+                  <Mail className="h-4 w-4" />
+                </Button>
+              </div>
+            </div>
+            
+            <div>
+              <h3 className="text-sm font-semibold">Product</h3>
+              <div className="mt-3 md:mt-4 space-y-2 text-xs md:text-sm">
+                <button onClick={onBack} className="block text-muted-foreground hover:text-foreground footer-link text-left">Features</button>
+                <button onClick={onBack} className="block text-muted-foreground hover:text-foreground footer-link text-left">Pricing</button>
+                <a href="#" className="block text-muted-foreground hover:text-foreground footer-link">Download</a>
+                <a href="#" className="block text-muted-foreground hover:text-foreground footer-link">Support</a>
+              </div>
+            </div>
+            
+            <div>
+              <h3 className="text-sm font-semibold">Legal</h3>
+              <div className="mt-3 md:mt-4 space-y-2 text-xs md:text-sm">
+                <button onClick={onBack} className="block text-muted-foreground hover:text-foreground footer-link text-left">Privacy Policy</button>
+                <span className="block text-primary text-xs md:text-sm font-medium">Terms of Service</span>
+                <a 
+                  href="mailto:hi@speedysite.co?subject=Bank%20Statement%20Pro%20-%20Inquiry" 
+                  className="block text-muted-foreground hover:text-foreground footer-link cursor-pointer"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Contact
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <Separator className="my-6 md:my-8" />
+          
+          <div className="text-center text-xs md:text-sm text-muted-foreground">
+            <p>&copy; 2025 Bank Statement Pro. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }

@@ -5,7 +5,7 @@ import { Separator } from "@/components/ui/separator"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Progress } from "@/components/ui/progress"
-import { Shield, Zap, Download, Tags, CheckCircle, Star, Play, ArrowRight, Github, Mail, Sparkles, Lock, Eye, Database, FileCheck, Layers, Menu, X, Upload } from "lucide-react"
+import { Shield, Zap, Download, Tags, CheckCircle, Star, Play, ArrowRight, Sparkles, Lock, Eye, Database, FileCheck, Layers, Menu, X, Upload } from "lucide-react"
 import { useState, useEffect, useRef } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -307,7 +307,7 @@ function App() {
         <div className="container px-0 max-w-4xl mx-auto">
           <div className="grid grid-cols-2 gap-6 md:gap-8 lg:grid-cols-4">
             <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-primary">10K+</div>
+              <div className="text-2xl md:text-3xl font-bold text-primary">100+</div>
               <div className="text-xs md:text-sm text-muted-foreground">Documents Processed</div>
             </div>
             <div className="text-center">
@@ -315,8 +315,8 @@ function App() {
               <div className="text-xs md:text-sm text-muted-foreground">Accuracy Rate</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-primary">5K+</div>
-              <div className="text-xs md:text-sm text-muted-foreground">Happy Users</div>
+              <div className="text-2xl md:text-3xl font-bold text-primary">3 Free</div>
+              <div className="text-xs md:text-sm text-muted-foreground">Generations</div>
             </div>
             <div className="text-center">
               <div className="text-2xl md:text-3xl font-bold text-primary">24/7</div>
@@ -414,22 +414,6 @@ function App() {
                       Export to Excel, CSV, PDF, JSON, and QIF formats. 
                       Perfect integration with QuickBooks, Xero, FreshBooks, 
                       and other popular accounting software.
-                    </p>
-                  </AccordionContent>
-                </AccordionItem>
-                
-                <AccordionItem value="realtime">
-                  <AccordionTrigger className="text-left text-sm md:text-base">
-                    <div className="flex items-center gap-3">
-                      <Zap className="h-4 w-4 md:h-5 md:w-5 text-accent" />
-                      Real-time Processing
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent>
-                    <p className="text-sm md:text-base text-muted-foreground">
-                      Watch transactions appear instantly as documents are processed. 
-                      Live progress tracking and immediate feedback for optimal 
-                      user experience and transparency.
                     </p>
                   </AccordionContent>
                 </AccordionItem>
@@ -622,11 +606,11 @@ function App() {
                     </div>
                     <div className="flex items-center gap-3">
                       <CheckCircle className="h-4 w-4 md:h-5 md:w-5 text-accent" />
-                      <span className="text-xs md:text-sm">Real-time processing</span>
+                      <span className="text-xs md:text-sm">Batch processing</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <CheckCircle className="h-4 w-4 md:h-5 md:w-5 text-accent" />
-                      <span className="text-xs md:text-sm">Batch processing</span>
+                      <span className="text-xs md:text-sm">Priority support</span>
                     </div>
                   </div>
                   <Separator />
@@ -683,8 +667,8 @@ function App() {
                 <AccordionContent>
                   <p className="text-sm md:text-base">
                     Bank Statement Pro supports importing PDF bank statements, CSV files, and image formats (JPEG, PNG). 
-                    You can export your processed data in Excel (.xlsx), CSV, PDF, JSON, and QIF formats for 
-                    seamless integration with popular accounting software like QuickBooks, Xero, and FreshBooks.
+                    You can export your processed data in Excel (.xlsx), CSV, and JSON formats for 
+                    seamless integration with most data analysis tools.
                   </p>
                 </AccordionContent>
               </AccordionItem>
@@ -759,14 +743,6 @@ function App() {
               <p className="mt-3 md:mt-4 text-xs md:text-sm text-muted-foreground">
                 Transform messy bank statements into organized financial data with AI-powered processing and complete privacy protection.
               </p>
-              <div className="mt-4 md:mt-6 flex space-x-4">
-                <Button variant="ghost" size="sm" className="btn-animated">
-                  <Github className="h-4 w-4" />
-                </Button>
-                <Button variant="ghost" size="sm" className="btn-animated">
-                  <Mail className="h-4 w-4" />
-                </Button>
-              </div>
             </div>
             
             <div>
